@@ -86,7 +86,11 @@ h2 {
 
 @media (max-width: 750px) {
     .footer-blurb {
-        text-align: left;
+        text-align: center;
+    }
+
+    .another-quote {
+        text-align: center;
     }
 }
 
@@ -97,4 +101,8 @@ h2 span {
 
 ::selection {
     background-color: #f84342
+}
+
+.img-responsive {
+    margin: 0 auto;
 }
