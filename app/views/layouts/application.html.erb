@@ -20,11 +20,12 @@
 				</div>
 			<% end %>
 		</div>
-		<div class="col-xs-4 slogan">
+		<div class="col-sm-4 hidden-xs slogan">
 			Reassuring you that it is just a moon since 2015
 		</div>
-		<div class="col-xs-5 links">
+		<div class="col-xs-8 col-xs-offset-1 col-sm-offset-0 col-sm-5 links">
 			<%= link_to 'Contribute', '#', :data => {:toggle => 'modal', :target => '#myModal'} %>
+			&nbsp;&nbsp;
 			<%= link_to 'About', about_path %>
 		</div>
 
@@ -40,8 +41,11 @@
 	    </div>
 	    <div class="modal-body">
 			<%= simple_form_for Quote.new do |f| %>
-				<%= f.input :saying %>
-				<%= f.input :author %>
+				<%= f.input :saying, :label => "You know you're a little into Star Wars when...", :placeholder => "you know just how sketchy a 12 parsec Kessel run is" %>
+				<br />
+				<br />
+				
+				<%= f.input :author, :label => "Who shared this gem?", :placeholder => "Nehemiah Andrews" %>
 			
 	    </div>
 	    <div class="modal-footer">
@@ -69,10 +73,10 @@
 
 <div class= "footer">
 	<div class= "container">
-		<div class= "col-xs-6">
+		<div class= "col-xs-12 col-sm-6">
 			<%= link_to "This isn't enough, I need more", root_path, :class => 'next-quote'%>
 		</div>
-		<div class= "col-xs-6 footer-blurb" >
+		<div class= "col-xs-12 col-sm-6 footer-blurb" >
 			Cobbled together near Detroit, MI by <a href="http://NehemiahAndrews.github.io"> Nehemiah Andrews </a><br />
 			Learn to build your own Splurty web app <a href="http://thefirehoseproject.com">@theFirehoseProject </a>
 
